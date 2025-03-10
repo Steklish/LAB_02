@@ -19,6 +19,7 @@ public class ResolveQueryService {
             RestTemplate restTemplate = new RestTemplate();
             ResponseEntity<String> response = restTemplate.getForEntity(client.getRequestForTranslation(srcLan, destLang, text), String.class);
             String json = response.getBody();
+            
             return List.of(json);
         }
         catch (Exception e){

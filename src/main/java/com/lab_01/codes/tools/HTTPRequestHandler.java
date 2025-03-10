@@ -8,7 +8,7 @@ public class HTTPRequestHandler {
     public String getRequestForTranslation(String srcLan, String destLang, String text){
         try {
             String encodedText = URLEncoder.encode(text, "UTF-8");
-            String fin_q = String.format(baseUrl, srcLan, destLang, encodedText);
+            String fin_q = baseUrl.formatted(srcLan, destLang, encodedText);
             
             System.out.println(fin_q);
             return fin_q;
