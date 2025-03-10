@@ -1,5 +1,6 @@
 package com.lab_01.codes.tools;
 
+import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
 public class HTTPRequestHandler {
@@ -12,8 +13,7 @@ public class HTTPRequestHandler {
             
             System.out.println(fin_q);
             return fin_q;
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (UnsupportedEncodingException e) {
             return "-";
         }
     }
