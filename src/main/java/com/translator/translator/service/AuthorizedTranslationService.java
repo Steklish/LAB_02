@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.translator.translator.model.translation.Translation;
-import com.translator.translator.model.user.User;
 
 @Service
 public class AuthorizedTranslationService {
@@ -37,7 +36,7 @@ public class AuthorizedTranslationService {
             String destLang,  String text, long id) throws JsonProcessingException {
         try {
             //!tst comment
-            Optional<User> userOptional = Optional.ofNullable(userService.getUserById(id));
+            Optional.ofNullable(userService.getUserById(id));
             List<String> result = resolveQueryService.getTranslation(srcLan, destLang, text);
             Translation newTranslation = new Translation(srcLan, destLang, text, result.get(0));
             translationService.createTranslation(id, newTranslation);
