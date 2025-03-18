@@ -5,13 +5,15 @@ _`[By Anton Kozlov]`_
 Пример запроса для перевода
 ```http://localhost:8080/getTranslation?srcL=en&targetL=ru&text=Hello+World```
 
-Параметрв `srcL`, `targetL`, `text` отвечают за язык оригигнала, желаемый язык и текст запроса соответственно.
+Параметров `srcL`, `targetL`, `text` отвечают за язык оригинала, желаемый язык и текст запроса соответственно.
 
 
-Пример вывода
-
+Пример вывода 
 ```
 [
-  "[[[\"Привет, мир\",\"Hello World\",null,null,10]],null,\"en\",null,null,null,null,[]]"
+    "Hi",
+    "Salut",
+    "en",
+    "fr"
 ]
 ```
