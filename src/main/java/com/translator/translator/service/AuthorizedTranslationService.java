@@ -36,6 +36,7 @@ public class AuthorizedTranslationService {
     public List<String> verifyTranslate( String srcLan, 
             String destLang,  String text, long id) throws JsonProcessingException {
         try {
+            //!tst comment
             Optional<User> userOptional = Optional.ofNullable(userService.getUserById(id));
             List<String> result = resolveQueryService.getTranslation(srcLan, destLang, text);
             Translation newTranslation = new Translation(srcLan, destLang, text, result.get(0));
