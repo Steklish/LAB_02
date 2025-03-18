@@ -49,7 +49,7 @@ public class GeneralController {
 
     @PostMapping
     public List<String> authorizedTranslation(@RequestParam String srcLan, 
-            @RequestParam String destLang, @RequestParam String text, @RequestBody int userId) throws JsonProcessingException {
+            @RequestParam String destLang, @RequestParam String text, @RequestBody long userId) throws JsonProcessingException {
         return authorizedTranslationService.verifyTranslate(srcLan, destLang, text, userId);
     }
     
